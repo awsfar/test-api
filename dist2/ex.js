@@ -15,7 +15,7 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/_expo', express.static(path.join(__dirname, '_expo')));
 
 // Serve the 'index.html' file for all routes
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
